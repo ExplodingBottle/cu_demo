@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+This file is part of ChiffonUpdater
+
+SPDX-License-Identifier: MIT
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        let translations = {
+            "website.title": "ChiffonUpdater Update Website",
+            "website.subtitle": "The simplest way to update your products",
+            "action.connecting": "Connecting to the agent",
+            "action.welcome": "Welcome",
+            "action.searching": "Searching products",
+            "action.whattodo": "Selecting what to do",
+            "action.catalog.browse": "Browsing the catalog",
+            "action.history": "Actions history",
+            "action.selecting.updates": "Selecting updates",
+            "action.selecting.rollback": "Selecting target versions",
+            "action.summary": "Summary",
+            "action.performing": "Performing actions",
+            "action.results": "Actions results",
+            "website.error": "Error",
+            "website.error.text": "An error has occured.",
+            "website.error.text2": "An error has occured while a task was running. The error code is ${0}.",
+            "website.error.text3": "It might be possible for you to retry the task that caused the error.",
+            "website.error.retry": "Retry the task which failed",
+            "website.error.1": "This error occured because the website has been unable to open a connection to the agent. You should:"
+                + "<ul><li>Check if you ran the agent and if it is still running.</li><li>Disable any ad blocker on this web page.</li></ul>"
+                + "If you don't have a copy of the agent, you can download it here.",
+            "website.error.2": "You have refused the connection of this website to the agent, it is not possible to continue.",
+            "website.error.6": "This error occured because this website has not been configured correctly.",
+            "website.connecting.title": "Please wait while a connection to the agent is being established...",
+            "website.connecting.details": "This operation should be relatively fast but might be impacted by your network speed.",
+            "website.connecting.notice": "A window could open asking you if you accept the open a connection to this website. You need to accept to continue.",
+            "website.connecting.notice2": "If nothing happens, it might be because the agent hasn't been launched or because of an ad blocker.",
+            "agent.download.button": "Download the agent now",
+
+            "website.welcome.text1": "Welcome to this website",
+            "website.welcome.text2": "Updating your products has never been so simple",
+            "website.welcome.text3": "This website will provide you with a plenty of useful options for updating your products.<br>"
+                + "These options include listing the available updates of your products, but also being able to<br>"
+                + "uninstall the updates from this website. To begin, press the button below.",
+            "website.welcome.button": "Start!",
+
+            "website.searching.title": "The agent is now searching your products...",
+            "website.searching.subtitle": "The agent is also looking for update informations as well as other informations",
+
+            "website.action.waiting": "The agent and the website are ready to perform an action",
+            "website.action.waiting2": "Please select below the action you want to do",
+
+            "action.choice.update": "Install product updates",
+            "action.choice.update.no": "All your products are up to date.",
+            "action.choice.rollback": "Rollback products",
+            "action.choice.rollback.no": "None of the products can be rolled back.",
+
+            "action.something.else": "Or do something else, ${0} or ${1}.",
+            "action.choice.catalog": "browse catalog",
+            "action.choice.history": "check actions history",
+
+            "action.choice.noproducts": "No products have been detected, therefore the options here are not available.",
+
+            "website.catalog.text1": "Welcome to the versions catalog",
+            "website.catalog.text2": "You should be able to find a specific offline update package for a specific version",
+
+            "catalog.search.placeholder": "Enter keywords...",
+            "catalog.search.action": "Search",
+            "catalog.loading": "Loading results, please wait...",
+
+            "catalog.previous": "Previous",
+            "catalog.next": "Next",
+
+            "catalog.current": "Current page: ${0} of ${1}",
+
+            "catalog.noresults": "No results matching your criterias have been found.",
+
+            "catalog.infos.name": "Product name",
+            "catalog.infos.version": "Target version",
+            "catalog.infos.releasedate": "Release date",
+            "catalog.infos.moreinfos": "More informations",
+
+            "catalog.infos.details": "Package details",
+            "catalog.infos.detailed": "Package for product ${0} to update to version ${1}.",
+            "catalog.infos.detailed3": "Description:",
+            "catalog.infos.download": "Download file: ${0}",
+
+            "history.loading": "Please wait while the actions history is being loaded",
+            "history.loaded": "Below is the history of actions",
+            "history.loaded2": "Actions in green have succeed, have been cancelled in yellow and have failed in red",
+            "history.norecords": "No history records have been found.",
+            "history.succeed": "Succeed: ${0}",
+            "history.cancelled": "Cancelled: ${0}",
+            "history.failed": "Failed: ${0}",
+            "history.update": "Updating product ${0} from version ${1} to ${2}",
+            "history.downgrade": "Rolling back product ${0} from version ${1} to ${2}",
+            "history.features": "Product features: ${0}",
+            "history.date": "Action happened on: ${0}",
+
+            "select.update.text": "Select now updates you want to apply",
+            "select.update.text2": "You can choose to update individual products or update everything",
+
+            "select.update.banner1": "Update for ${0} to version ${1}",
+            "select.update.banner.details": "Released on ${0}",
+            "select.update.banner.details2": "Update description: ${0}",
+            "select.update.banner.installon": "Can be installed on:",
+            "select.update.banner.product": "Product ${0} version ${1}",
+            "select.update.banner.product.details": "Features: ${0}. Located on your computer at: ${1}",
+            "select.update.selectall": "Select all",
+            "select.update.deselectall": "Clear all",
+            "select.update.reviewinst": "Review then install",
+
+            "summary.title": "Summary of the actions you want to do",
+            "summary.title2": "You can find here everything that will be done if you confirm the actions",
+            "summary.optype.update": "The requested action will be an update of one or more products",
+            "summary.optype.rollback": "The requested action will be a rollback of one or more products",
+            "summary.perform.update": "Install updates",
+            "summary.perform.rollback": "Rollback products",
+            "summary.infos.update": "Product ${0} with version ${1} will be updated to version ${2}",
+            "summary.infos.rollback": "Product ${0} with version ${1} will be rolled back to version ${2}",
+
+            "actions.performing.text": "Please wait while the requested actions are being performed",
+            "actions.performing.text2": "An external window should open, showing progression",
+
+            "results.text": "Result of the actions",
+            "results.succeed.all": "All the requested actions have been performed with success",
+            "results.succeed.some": "The requested actions have been performed but some failed or were cancelled",
+            "results.succeed.none": "None of the requested actions succeed",
+
+            "results.detailed": "Results details:",
+
+            "results.table.total": "Total",
+            "results.table.succeed": "Succeed",
+            "results.table.cancelled": "Cancelled",
+            "results.table.failed": "Failed",
+            "results.history.link": "You can also ${0}",
+
+            "select.rollback.text": "Select now versions you want to rollback your products to",
+            "select.rollback.text2": "You can choose to rollback individual products or rollback everything",
+            "select.rollback.reviewrbak": "Review then rollback",
+            "select.rollback.installedon": "Installed on: ${0}",
+            "select.rollback.select": "Select a version to rollback on:",
+            "select.rollback.version": "Version: ${0}",
+            "select.rollback.versiondesc": "Version description: ${0}",
+            "select.rollback.noinfo": "No informations available",
+
+            "about.title": "About",
+            "about.cookie.title": "Cookies usage",
+
+            "text.about": `<h3>This website is part ChiffonUpdater to allow software editors and end-users an easy access to updates.</h3>
+            The entire project released under the MIT License.`,
+            "text.cookie": `This website doesn't make use of cookies of any kind.<br>
+            The only type of persistent storage used is the web storage. It can be cleaned up the same
+            way as cookies (depending on the web browser).<br><br>Here are the storage keys used:
+            <ul><li>ChiffonUpdaterAccessKey: Used by the driver when the agent grants the website a permanent access without confirmation</li></ul>
+            Please note that without access to this key, the 'remember my choice' checkbox in the agent will not be functional`
+        };
+
+    </script>
+    <script src="../js/tpage.js" type="text/javascript"></script>
+</head>
+
+</html>

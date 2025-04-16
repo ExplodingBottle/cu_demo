@@ -1,0 +1,213 @@
+/*
+ * ChiffonUpdater Website Style File
+ * This file is part of ChiffonUpdater
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* More visibility */
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: aqua;
+}
+
+a:active {
+    color: gray;
+}
+
+.upper-banner {
+    background-color: #078c7e;
+    padding: 10px;
+    color: white;
+    height: 148;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.upper-banner img {
+    float: left;
+    margin-right: 10px
+}
+
+.upper-banner h2 {
+    font-style: italic;
+}
+
+.navigation-bar {
+    top: 148px;
+    bottom: 100px;
+    width: 350px;
+    background-color: #116e64;
+    position: fixed;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.navigation-entry {
+    background-color: gainsboro;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: 30px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.navigation-inner {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.b-checkbox {
+    float: right;
+    margin-right: 20px;
+}
+
+.content-frame {
+    top: 148px;
+    bottom: 120px;
+    left: 370px;
+    right: 0;
+    padding: 10px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.content-message {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #078c7e;
+    color: white;
+}
+
+.content-message-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.content-message-inner {
+    margin-left: 10px;
+}
+
+.content-message-push-right {
+    text-align: right;
+}
+
+.agent-download-div {
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.display-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100% - 10px;
+    padding-left: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.display-banner img {
+    margin-right: 20px;
+    float: left;
+}
+
+.agent-download-button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+    background-color: #116e64;
+    border-radius: 10px;
+}
+
+.agent-download-button img {
+    margin-right: 10px;
+    float: inline-start;
+}
+
+.lower-banner {
+    background-color: #078c7e;
+    padding: 10px;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+.search-progress {
+    width: 100%;
+}
+
+.buttons-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.catalog-search-bar {
+    text-align: right;
+}
+
+.results-table {
+    background-color: #116e64;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.results-table th {
+    border: 1px solid gray;
+}
+
+.results-table td {
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.catalog-table {
+    width: 100%;
+    background-color: #116e64;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.catalog-table th {
+    border: 1px solid gray;
+}
+
+.catalog-table th {
+    border: 1px solid gray;
+}
+
+.catalog-table td {
+    border: 1px solid gray;
+    text-align: center;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+This file is part of ChiffonUpdater
+
+SPDX-License-Identifier: MIT
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        let translations = {
+            "website.title": "Site de mise à jour ChiffonUpdater",
+            "website.subtitle": "Le moyen le plus simple de mettre à jour vos produits",
+            "action.connecting": "Connexion à l'agent",
+            "action.welcome": "Bienvenue",
+            "action.searching": "Recherche des produits",
+            "action.whattodo": "Sélection de quoi faire",
+            "action.catalog.browse": "Navigation dans le catalogue",
+            "action.history": "Historique des actions",
+            "action.selecting.updates": "Sélection des mises à jour",
+            "action.selecting.rollback": "Sélection des versions cibles",
+            "action.summary": "Résumé",
+            "action.performing": "Réalisation des actions",
+            "action.results": "Résultats des actions",
+            "website.error": "Erreur",
+            "website.error.text": "Une erreur s'est produite.",
+            "website.error.text2": "Une erreur s'est produite pendant qu'une tâche était en cours. Le code d'erreur est ${0}.",
+            "website.error.text3": "Il est peut-être possible pour vous de retenter la tâche ayant causé l'erreur.",
+            "website.error.retry": "Retenter la tâche ayant échoué",
+            "website.error.1": "Cette erreur s'est produite car le site web a été incapable d'ouvrir une connexion avec l'agent. Vous devriez:"
+                + "<ul><li>Vérifier si vous avez lancé l'agent et si il est encore en cours d'éxecution.</li><li>Désactiver tout bloqueur de publicités sur cette page.</li></ul>"
+                + "Si vous ne possédez pas de copie de l'agent, vous pouvez le télécharger ici.",
+            "website.error.2": "Vous avez refusé la connexion de ce site à l'agent, il est impossible de continuer.",
+            "website.error.6": "Cette erreur s'est produite car le site web n'a pas été configuré correctement.",
+            "website.connecting.title": "Veuillez patienter pendant qu'une connexion à l'agent est en train d'être établie...",
+            "website.connecting.details": "Cette opération devrait être relativement rapide mais peut être impactée par la vitesse de votre réseau.",
+            "website.connecting.notice": "Une fenêtre pourrait s'ouvrir vous demandant si vous acceptez d'ouvrir une connexion à ce site. Vous devez accepter pour continuer.",
+            "website.connecting.notice2": "Si rien ne se passe, cela pourrait être car l'agent n'est pas lancé ou causé par une bloqueur de publicités.",
+            "agent.download.button": "Télécharger l'agent maintenant",
+
+            "website.welcome.text1": "Bienvenue sur ce site web",
+            "website.welcome.text2": "Mettre à jour vos produits n'a jamais été aussi simple",
+            "website.welcome.text3": "Ce site web va vous proposer de nombreuses options utiles pour mettre à jour vos produits.<br>"
+                + "Ces options incluent l'énumération des mises à jours disponibles pour vos produits, mais aussi la possibilité<br>"
+                + "de désinstaller les mises à jour à partir de ce site web. Pour commencer, appuyez sur le bouton ci-dessous.",
+            "website.welcome.button": "Démarrer!",
+
+            "website.searching.title": "L'agent est maintenant en train de rechercher vos produits...",
+            "website.searching.subtitle": "L'agent recherche aussi les informations de mises à jour ainsi que d'autres informations",
+
+            "website.action.waiting": "L'agent et le site web sont prêts à réaliser une action",
+            "website.action.waiting2": "Veuillez sélectionner ci-dessous l'action que vous souhaitez faire",
+
+            "action.choice.update": "Installer des mises à jours de produits",
+            "action.choice.update.no": "Tous vos produits sont à jour.",
+            "action.choice.rollback": "Rétrograder des produits",
+            "action.choice.rollback.no": "Aucun de vos produits ne peuvent être rétrogradés.",
+
+            "action.something.else": "Ou faire quelque chose d'autre, ${0} or ${1}.",
+            "action.choice.catalog": "naviguer dans le catalogue",
+            "action.choice.history": "vérifier l'historique des actions",
+
+            "action.choice.noproducts": "Aucun produit n'a été détecté, en conséquence les options ici ne sont pas disponibles.",
+
+            "website.catalog.text1": "Bienvenue dans le catalogue des versions",
+            "website.catalog.text2": "Vous devriez être capable de trouver un paquet d'installation hors ligne spécifique pour une version spécifique",
+
+            "catalog.search.placeholder": "Entrez des mots-clefs...",
+            "catalog.search.action": "Chercher",
+            "catalog.loading": "Chargement des résultats, veuillez patienter...",
+
+            "catalog.previous": "Précédent",
+            "catalog.next": "Suivant",
+
+            "catalog.current": "Page actuelle: ${0} sur ${1}",
+
+            "catalog.noresults": "Aucun résultats correspondant à vos critères n'ont trouvés.",
+
+            "catalog.infos.name": "Nom du produit",
+            "catalog.infos.version": "Version cible",
+            "catalog.infos.releasedate": "Parue le",
+            "catalog.infos.moreinfos": "Plus d'informations",
+
+            "catalog.infos.details": "Détails du paquet",
+            "catalog.infos.detailed": "Paquet pour le produit ${0} de mise à jour vers la version ${1}.",
+            "catalog.infos.detailed3": "Description:",
+            "catalog.infos.download": "Télécharger le fichier: ${0}",
+
+            "history.loading": "Veuillez patienter pendant le chargement de l'historique des actions",
+            "history.loaded": "L'historique des actions se trouve ci-dessous",
+            "history.loaded2": "Les actions en vert ont réussi, ont été annulées en jaune et ont échouées en rouge",
+            "history.norecords": "Aucun élément d'historique n'a été trouvé.",
+            "history.succeed": "Réussie: ${0}",
+            "history.cancelled": "Annulée: ${0}",
+            "history.failed": "Échouée: ${0}",
+            "history.update": "Mise à jour du produit ${0} de la version ${1} à la version ${2}",
+            "history.downgrade": "Rétrogradation du produit ${0} de la version ${1} à la version ${2}",
+            "history.features": "Fonctionnalités du produit: ${0}",
+            "history.date": "L'action s'est produite le: ${0}",
+
+            "select.update.text": "Sélectionnez maintenant les mises à jour que vous souhaitez appliquer",
+            "select.update.text2": "Vous pouvez choisir de mettre à jour des produits individuellement ou tout mettre à jour",
+
+            "select.update.banner1": "Mise à jour pour ${0} vers la version ${1}",
+            "select.update.banner.details": "Parue le ${0}",
+            "select.update.banner.details2": "Description de la mise à jour: ${0}",
+            "select.update.banner.installon": "Peut être installée sur:",
+            "select.update.banner.product": "Produit ${0} version ${1}",
+            "select.update.banner.product.details": "Fonctionnalités: ${0}. Situé sur votre ordinateur à: ${1}",
+            "select.update.selectall": "Tout sélectionner",
+            "select.update.deselectall": "Tout enlever",
+            "select.update.reviewinst": "Revue puis installation",
+
+            "summary.title": "Résumé des actions que vous voulez faire",
+            "summary.title2": "Vous pouvez trouver ici tout ce qui sera fait si vous confirmez les actions",
+            "summary.optype.update": "L'action demandée sera une mise à jour d'un produit ou plus",
+            "summary.optype.rollback": "L'action demandée sera une rétrogradation d'un produit ou plus",
+            "summary.perform.update": "Installer les mises à jour",
+            "summary.perform.rollback": "Rétrograder les produits",
+            "summary.infos.update": "Le produit ${0} à la version ${1} sera mis à jour vers la version ${2}",
+            "summary.infos.rollback": "Le produit ${0} à la version ${1} sera rétrogradé vers la version ${2}",
+
+            "actions.performing.text": "Veuillez patienter pendant que les actions demandées sont en train d'être réalisées",
+            "actions.performing.text2": "Une fenêtre externe devrait s'ouvrir, montrant la progression",
+
+            "results.text": "Résultat des actions",
+            "results.succeed.all": "Toutes les actions demandées ont été réalisées avec succès",
+            "results.succeed.some": "Les actions demandées ont été réalisées mais certaines ont échoué ou ont été annulées",
+            "results.succeed.none": "Aucune des actions demandées n'a pu être réalisée",
+
+            "results.detailed": "Détails des résultats:",
+
+            "results.table.total": "Total",
+            "results.table.succeed": "Réussies",
+            "results.table.cancelled": "Annulées",
+            "results.table.failed": "Échouées",
+            "results.history.link": "Vous pouvez aussi ${0}",
+
+            "select.rollback.text": "Sélectionnez maintenant les versions vers lesquelles vous voulez rétrograder vos produits",
+            "select.rollback.text2": "Vous pouvez choisir de rétrograder des produits individuellement ou tout rétrograder",
+            "select.rollback.reviewrbak": "Revue puis rétrogradation",
+            "select.rollback.installedon": "Installée le: ${0}",
+            "select.rollback.select": "Sélectionnez une version vers laquelle rétrograder:",
+            "select.rollback.version": "Version: ${0}",
+            "select.rollback.versiondesc": "Description de la version: ${0}",
+            "select.rollback.noinfo": "Pas d'informations disponibles",
+
+            "about.title": "À propos",
+            "about.cookie.title": "Utilisation des cookies",
+
+            "text.about": `<h3>Ce site web fait partie de ChiffonUpdater pour permettre aux éditeurs de logiciels et aux utilisateurs finaux un accès facile aux mises à jour.</h3>
+            Le projet tout entier est réalisé sous licence MIT.`,
+            "text.cookie": `Ce site web n'utilise aucun cookie de n'importe quel type.<br>
+            Le seul type de stockage persistant est le stockage web. Il peut être effacé de la même
+            manière qu'avec les cookies (suivant le navigateur web).<br><br>Voici les clefs de stockage utilisées:
+            <ul><li>ChiffonUpdaterAccessKey: Utilisé par le pilote lorsque l'agent donne au site web un accès permanent sans confirmation</li></ul>
+            Veuillez noter que sans accès à cette clef, la boîte à cocher 'se rappeler de mon choix' dans l'agent ne sera pas fonctionnelle`
+        };
+
+    </script>
+    <script src="../js/tpage.js" type="text/javascript"></script>
+</head>
+
+</html>
